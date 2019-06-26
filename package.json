@@ -1,0 +1,62 @@
+{
+  "name": "starter-kit",
+  "version": "1.0.0",
+  "description": "A starter kit for creating react applications.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "esw webpack.config.* src build-scripts --color",
+    "lint:watch": "npm run lint -- --watch",
+    "open:src": "babel-node build-scripts/src-server.js",
+    "prestart": "babel-node build-scripts/start-message.js",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "test": "mocha --require @babel/register --reporter progress build-scripts/test-setup.js \"src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesMccown/starter-kit.git"
+  },
+  "author": "Charles McCown",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/CharlesMccown/starter-kit/issues"
+  },
+  "homepage": "https://github.com/CharlesMccown/starter-kit#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "compression": "^1.7.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.0.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-watch": "^5.1.2",
+    "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jsdom": "^15.1.1",
+    "json-schema-faker": "^0.5.0-rc17",
+    "json-server": "^0.15.0",
+    "mocha": "^6.1.4",
+    "nock": "^10.0.6",
+    "npm-run-all": "^4.1.5",
+    "numeral": "^2.0.6",
+    "open": "^6.3.0",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.0",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-md5-hash": "0.0.6",
+    "webpack-merge": "^4.2.1"
+  }
+}
