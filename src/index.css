@@ -3,5 +3,9 @@ body {
 }
 
 table th {
-  padding: 5px
+  padding: 5px;
+  text-align: left;
+}
+table td {
+  padding: 5px;
 }
